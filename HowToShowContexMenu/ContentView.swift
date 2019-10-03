@@ -10,7 +10,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        Text("HARD press me!")
+            .padding()
+            .contextMenu {
+                Button(action: {
+                    // change country setting
+                }) {
+                    Text("Choose Country")
+                    Image(systemName: "globe")
+                }
+
+                Button(action: {
+                    // enable geolocation
+                }) {
+                    Text("Detect Location")
+                    Image(systemName: "location.circle")
+                }
+            }
     }
 }
 
